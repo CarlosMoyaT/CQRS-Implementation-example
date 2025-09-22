@@ -1,25 +1,32 @@
 package org.example.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class User {
 
-    private Long id;
+    @Id
+    private String UserId;
     private String userName;
     private String name;
     private String password;
 
     public User(Long id, String userName, String name, String password) {
-        this.id = id;
+        this.UserId = id;
         this.userName = userName;
         this.name = name;
         this.password = password;
     }
 
-    public Long getId() {
-        return id;
+    public Long getUserId() {
+        return UserId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUserId(Long userId) {
+        this.UserId = userId;
     }
 
     public String getUserName() {
