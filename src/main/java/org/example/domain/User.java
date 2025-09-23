@@ -9,24 +9,24 @@ import jakarta.persistence.Id;
 public class User {
 
     @Id
-    private String UserId;
+    private String userId;
     private String userName;
     private String name;
     private String password;
 
-    public User(Long id, String userName, String name, String password) {
-        this.UserId = id;
+    public User(String id, String userName, String name, String password) {
+        this.userId = id;
         this.userName = userName;
         this.name = name;
         this.password = password;
     }
 
-    public Long getUserId() {
-        return UserId;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUserId(Long userId) {
-        this.UserId = userId;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getUserName() {
