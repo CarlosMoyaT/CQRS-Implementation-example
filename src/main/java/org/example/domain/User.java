@@ -11,14 +11,14 @@ public class User {
     @Id
     private String userId;
     private String userName;
-    private String name;
+    private String userAddress;
     private String password;
 
-    public User(String id, String userName, String name, String password) {
-        this.userId = id;
+    public User(String userId, String userName, String password, String userAddress) {
+        this.userId = userId;
         this.userName = userName;
-        this.name = name;
         this.password = password;
+        this.userAddress = userAddress;
     }
 
     public String getUserId() {
@@ -37,12 +37,12 @@ public class User {
         this.userName = userName;
     }
 
-    public String getName() {
-        return name;
+    public String getUserAddress() {
+        return userAddress;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserAddress(String userAddress) {
+        this.userAddress = userAddress;
     }
 
     public String getPassword() {
