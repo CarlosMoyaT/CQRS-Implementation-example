@@ -1,27 +1,11 @@
-package org.example.domain;
+package org.example.command;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+public class CreateUserCommand {
 
-@Entity
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String userId;
     private String userName;
     private String userAddress;
     private String password;
-
-
-    public User(String userId, String userName, String password, String userAddress) {
-        this.userId = userId;
-        this.userName = userName;
-        this.password = password;
-        this.userAddress = userAddress;
-    }
 
     public String getUserId() {
         return userId;
