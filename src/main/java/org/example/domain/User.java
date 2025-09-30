@@ -13,14 +13,16 @@ public class User {
     private String userId;
     private String userName;
     private String userAddress;
+    private String userContact;
     private String password;
 
 
-    public User(String userId, String userName, String password, String userAddress) {
+    public User(String userId, String userName, String password, String userAddress, String userContact) {
         this.userId = userId;
         this.userName = userName;
         this.password = password;
         this.userAddress = userAddress;
+        this.userContact = userContact;
     }
 
     public String getUserId() {
@@ -45,6 +47,14 @@ public class User {
 
     public void setUserAddress(String userAddress) {
         this.userAddress = userAddress;
+    }
+
+    public String getUserContact() {
+        return userContact;
+    }
+
+    public void setUserContact(String userContact) {
+        this.userContact = userContact;
     }
 
     public String getPassword() {

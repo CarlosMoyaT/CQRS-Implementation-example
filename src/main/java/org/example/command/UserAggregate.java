@@ -10,7 +10,7 @@ public class UserAggregate {
         this.writeRepository = repository;
     }
 
-    public User hanleCreateUserCommand(CreateUserCommand command) {
+    public User handleCreateUserCommand(CreateUserCommand command) {
         User user = new User(command.getUserId(), command.getUserName(), command.getUserAddress());
         return user;
     }
@@ -18,6 +18,7 @@ public class UserAggregate {
     public User handleUpdateUserCommand(UpdateUserCommand command) {
         User user = writeRepository.getUser(command.getUserId());
         user.setUserAddress(command.getAddresses());
+        user.setUserContact(command.getContact());
         writeRepository.addUser(user.getUserId(), user);
         return user;
     }
